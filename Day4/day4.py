@@ -8,9 +8,9 @@ for i in f:
     oneEnd = int(pair[0].split("-")[1])
     twoStart = int(pair[1].split("-")[0])
     twoEnd = int(pair[1].split("-")[1])
-    if (oneStart <= twoStart) or (oneEnd >= twoEnd):
+    if (oneStart <= twoStart) and (oneEnd >= twoEnd):
         cover += 1
-    elif (twoStart <= oneStart) or (twoEnd >= oneEnd):
+    elif (twoStart <= oneStart) and (twoEnd >= oneEnd):
         cover += 1
 print(cover)
 f.close()
